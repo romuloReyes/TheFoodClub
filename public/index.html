@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TheFoodClub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="text-gray-600 font-body">
+    <div class="grid md:grid-cols-4"><!--div contenedor global-->
+        <div class="md:col-span-1 md:flex md:justify-end"><!--contenedor barra navegacion-->
+            <nav class="text-right">
+                <div class="flex justify-between items-center"> <!--contenedor titulo y sus elementos-->
+                    <h1 class="font-bold text-2xl p-4 mr-2 border-b border-gray-100 relative hover:scale-110 transition ease-out duration-300">
+                        <a class="flex -space-x-0.5" href="/">
+                            <span class="text-tfc-1">T</span><span class="text-tfc-2">h</span><span class="text-tfc-3">e</span><span class="text-tfc-4">F</span><span class="text-tfc-5">o</span><span class="text-tfc-5">o</span><span class="text-tfc-6">d</span><span class="text-tfc-2">C</span><span class="text-tfc-1">l</span><span class="text-tfc-3">u</span><span class="text-tfc-4">b</span> 
+                        </a> 
+                        <img class="w-3 absolute top-0 mt-9 ml-3" src="img/icono-de-hoja-verde.png" alt="icono hoja">
+                        <img class="w-3 absolute top-0 mt-4 ml-[120px] rotate-90" src="img/icono-de-hoja-verde.png" alt="icono hoja">
+                    </h1>
+                    <div class="px-4 md:hidden cursor-pointer" id="burger">
+                        <svg class="w-6" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </div>
+                </div>
+
+                <ul class="text-sm mt-6 hidden md:block" id="menu"><!--contenedor opciones de navegacion-->
+                    <li class="text-gray-700 font-bold py-1 border-r-4 border-tfc-4">
+                        <a class="px-4" href="#">
+                            <span>Recetas</span>
+                        </a>
+                    </li>
+
+                    <li class="py-1 border-r-4 border-white">
+                        <a class="px-4" href="#">
+                            <span>Carrito de compras</span>
+                        </a>
+                    </li>
+
+                    <li class="py-1 border-r-4 border-white">
+                        <a class="px-4" href="#">
+                            <span>Evaluar receta</span>
+                        </a>
+                    </li>
+
+                    <li class="py-1 border-r-4 border-white">
+                        <a class="px-4" href="#">
+                            <span>Se parte del club</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div><!--fin contenedor barra de navegacion-->
+
+        <main class="px-16 py-6 bg-gray-100 md:col-span-3">
+            <div class="flex justify-center md:justify-end"><!--contenedor enlaces inicio de sesion y registro y sus elementes-->
+                <a class="text-tfc-4 btn border-tfc-4 md:border-2 hover:bg-tfc-4 hover:text-white transition ease-out duration-500" href="#">Inicia Sesion</a>
+                <a class="text-tfc-4 ml-3 btn border-tfc-4 md:border-2 hover:bg-tfc-4 hover:text-white transition ease-out duration-500" href="#">Registrate</a>
+            </div>
+
+            <header><!--contenedor del titulo del contenido principal-->
+                <h2 class="text-gray-700 text-6xl font-semibold">Recetas</h2>
+            </header>
+
+            <div><!--contenedor contenido principal-->
+                <h4 class="font-bold mt-12 pb-2 border-b border-gray-200">Agregadas Recientemente</h4>
+                
+                <div class="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-10"><!--contenedor tarjetas de desayunos-->
+                    <div class="card hover:shadow-lg group"><!--tarjeta 1-->
+                        <img class="w-full h-32 sm:h-48 object-cover group-hover:opacity-80 transition ease-out duration-500" src="img/comida1.webp" alt="comida1">
+                        <div class="m-4">
+                            <span class="font-bold">receta 1</span>
+                            <span class="block text-gray-500 text-sm">descripcion</span>
+                        </div>
+                        <div class="badge">
+                            <span>$100</span>
+                        </div>
+                        <div class="bg-white text-primary text-xs rounded-full p-2 absolute top-20 right-2 mt-14 opacity-50 group-hover:opacity-100 transition ease-out duration-500 cursor-pointer">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                              </svg>  
+                        </div>          
+                    </div>
+
+                    <div class="card hover:shadow-lg group"><!--tarjeta 2-->
+                        <img class="w-full h-32 sm:h-48 object-cover group-hover:opacity-80 transition ease-out duration-500" src="img/comida2.webp" alt="comida2">
+                        <div class="m-4">
+                            <span class="font-bold">receta 2</span>
+                            <span class="block text-gray-500 text-sm">descripcion</span>
+                        </div>
+                        <div class="badge">
+                            <span>$110</span>
+                        </div>
+                        <div class="bg-white text-primary text-xs rounded-full p-2 absolute top-20 right-2 mt-14 opacity-50 group-hover:opacity-100 transition ease-out duration-500 cursor-pointer">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                              </svg>  
+                        </div>  
+                    </div>
+
+                    <div class="card hover:shadow-lg group"><!--tarjeta 3-->
+                        <img class="w-full h-32 sm:h-48 object-cover group-hover:opacity-80 transition ease-out duration-500" src="img/comida3.jpg" alt="comida3">
+                        <div class="m-4">
+                            <span class="font-bold">receta 3</span>
+                            <span class="block text-gray-500 text-sm">descripcion</span>
+                        </div>
+                        <div class="badge">
+                            <span>$90</span>
+                        </div>
+                        <div class="bg-white text-primary text-xs rounded-full p-2 absolute top-20 right-2 mt-14 opacity-50 group-hover:opacity-100 transition ease-out duration-500 cursor-pointer">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                              </svg>  
+                        </div> 
+                    </div>
+                </div><!--FIN contenedor tarjetas de desayunos-->
+
+                <h4 class="font-bold mt-12 pb-2 border-b border-gray-200">Mas populares</h4>
+
+                <div class="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-10"><!--contenedor de tarjetas de comida-->
+                    <div class="card hover:shadow-lg group"><!--tarjeta 1-->
+                        <img class="w-full h-32 sm:h-48 object-cover group-hover:opacity-80 transition ease-out duration-500" src="img/comida4.jpg" alt="comida4">
+                        <div class="m-4">
+                            <span class="font-bold">receta 1</span>
+                            <span class="block text-gray-500 text-sm">descripcion</span>
+                        </div>
+                        <div class="badge">
+                            <span>$112</span>
+                        </div>
+                        <div class="bg-white text-primary text-xs rounded-full p-2 absolute top-20 right-2 mt-14 opacity-50 group-hover:opacity-100 transition ease-out duration-500 cursor-pointer">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                              </svg>  
+                        </div> 
+                    </div>
+
+                    <div class="card hover:shadow-lg group"><!--tarjeta 2-->
+                        <img class="w-full h-32 sm:h-48 object-cover group-hover:opacity-80 transition ease-out duration-500" src="img/comida5.jpg" alt="comida5">
+                        <div class="m-4">
+                            <span class="font-bold">receta 2</span>
+                            <span class="block text-gray-500 text-sm">descripcion</span>
+                        </div>
+                        <div class="badge">
+                            <span>$95</span>
+                        </div>
+                        <div class="bg-white text-primary text-xs rounded-full p-2 absolute top-20 right-2 mt-14 opacity-50 group-hover:opacity-100 transition ease-out duration-500 cursor-pointer">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                              </svg>  
+                        </div> 
+                    </div>
+
+                    <div class="card hover:shadow-lg group"><!--tarjeta 3-->
+                        <img class="w-full h-32 sm:h-48 object-cover group-hover:opacity-80 transition ease-out duration-500" src="img/comida1.webp" alt="comida6">
+                        <div class="m-4">
+                            <span class="font-bold">receta 6</span>
+                            <span class="block text-gray-500 text-sm">descripcion</span>
+                        </div>
+                        <div class="badge">
+                            <span>$100</span>
+                        </div>
+                        <div class="bg-white text-primary text-xs rounded-full p-2 absolute top-20 right-2 mt-14 opacity-50 group-hover:opacity-100 transition ease-out duration-500 cursor-pointer">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                              </svg>  
+                        </div> 
+                    </div>
+                </div><!--FIN contenedor de tarjetas de comida-->
+
+                <div class="flex justify-center"><!--contenedor boton de cargas mas-->
+                    <div class="bg-tfc-4 text-white btn hover:shadow-inner transform hover:scale-110 transition ease-out duration-300">
+                        Cargar mas
+                    </div>
+                </div>
+
+            </div> <!--FIN contenedor contenido principal-->
+        </main> 
+    </div>
+
+    
+</body>
+</html>
